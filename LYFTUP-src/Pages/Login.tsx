@@ -1,11 +1,13 @@
 import { InputField } from '../Components/InputField';
+import { View } from 'react-native';
 
 export function Login() {
     return (
         <>
-            <div>
+            <View style={{ top:'100%', justifyContent:'center', alignItems:'center'}}>
                 <InputField />
-            </div>
+                <InputField />
+            </View>
         </>
     )
 }

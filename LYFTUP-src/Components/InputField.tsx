@@ -4,33 +4,33 @@ import { StyleSheet, TextInput, View, Text } from "react-native"
 
 export function InputField() {
     const [text, setText] = useState('');
-
-    
-
     return (
         <>
-
-            <View style={{ padding: 10 }}>
-                <TextInput
-                    style={style.inputField}
-                    onChangeText={newText => setText(newText)}
-                    defaultValue={text}
-                />
-                <Text>{text}</Text>
-            </View>
+            <TextInput
+                style={style.inputField}
+                onChangeText={newText => setText(newText)}
+                defaultValue={text}
+            />
+            {/* <Text>{text}</Text> */}
         </>
     );
 }
 
 const style = StyleSheet.create({
     red: {
-        padding: 10,
-        fontSize: 42,
+        padding: 50,
+        fontSize: 100,
         color: "red"
     },
 
     inputField: {
+        marginTop: 15,
+        marginBottom: 15,
+        height: 55,
+        width: 300,
+        fontSize:26,
+        textAlign:'center',
         color: "white",
-        backgroundColor: "green"
+        backgroundColor: "teal"
     }
 })
