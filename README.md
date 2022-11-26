@@ -2,9 +2,6 @@
 
 Why:
 
-paywalls are ass
+paywalls for subpar gym apps? cmonbruh
 
 
-Contribute:
-
-Need to know react native
