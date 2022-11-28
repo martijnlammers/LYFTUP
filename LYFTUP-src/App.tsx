@@ -1,11 +1,11 @@
 import { View } from 'react-native';
-import { Login } from './Pages/Login';
+import { Home } from './Pages/Home';
 
 
 export default function App() {
   return (
     <View>
-     <Login/>
+     <Home/>
     </View>
   );
 }
