@@ -1,10 +1,11 @@
 
 
-export enum ButtonColor{
-    background = "#4B4BB6",
-    text = "#FFFFFF"
-}
 
-export enum HomeColor{
-    background = "#6666FF"
-}
+const PURPLELIGHT = "#6666FF"
+const PURPLEMEDIUM = "#4B4BB6"
+const WHITE = "#FFFFFF"
+
+export const ICON = WHITE
+export const FOOTER_BACKGROUND = PURPLEMEDIUM
+export const HOME_BACKGROUND = PURPLELIGHT
+export const FOOTER_BUTTON_BACKGROUND = PURPLEMEDIUM
