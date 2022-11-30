@@ -3,17 +3,18 @@ import { FOOTER_BACKGROUND } from '../Assets/Colors';
 import { FooterButton } from './FooterButton';
 import { FooterButtonProperties } from "../Assets/Interfaces";
 
-//supported icons names and types: https://oblador.github.io/react-native-vector-icons/
+
+//supported icons and types: https://reactnativeelements.com/docs/components/icon
 
 let buttonProps: FooterButtonProperties[] = [
-    {iconName:"home", type:"antdesign", link:""},
-    {iconName:"areachart", type:"antdesign", link:""},
-    {iconName:"linechart", type:"antdesign", link:""},
-    {iconName:"setting", type:"antdesign", link:""},
+    {iconName:"md-home", type:"ionicon", link:""},
+    {iconName:"weight-lifter", type:"material-community", link:""},
+    {iconName:"graph-bar", type:"foundation", link:""},
+    {iconName:"settings-sharp", type:"ionicon", link:""},
 ];
 
 const footerButtons = buttonProps.map((properties, index) => 
-    <FooterButton {...properties}/>
+    <FooterButton key={index} {...properties}/>
 );
 
 export function Footer() {
