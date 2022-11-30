@@ -4,19 +4,16 @@
 
 paywalls for subpar gym apps? cmonbruh
 
+# Setup:
+## Pre-requisite tools:
+### On Windows machine:
+- [**Git**](https://git-scm.com/downloads)
+- [**NodeJS 18**](https://nodejs.org/en/download/)
 
-On your phone:
-Install expo client.
-
-Pre-requisite tools:
-On Windows machine:
-[**Git**](https://git-scm.com/downloads)
-[**NodeJS 18**](https://nodejs.org/en/download/)
-
-On IOS / Android device:
+### On IOS / Android device:
 **Expo Go**, downloadable in app store.
 
-
+## Install:
 ```shell
 // Open a terminal and traverse to a directory 
 // where you want to put the project in.
@@ -26,7 +23,7 @@ cd .\LYFTUP\LYFTUP-src\
 npm i
 ```
 
-Start LYFTUP:
+## Start:
 ```shell
 // Make sure you are inside the \LYFTUP-src folder.
 npm start
