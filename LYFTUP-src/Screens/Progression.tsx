@@ -1,7 +1,6 @@
 import { Text } from "react-native"
 import { Button } from "react-native";
-export const Settings = ({ navigation }: any) => {
-
+export const Progression = ({ navigation }: any) => {
     return (
         <>
             <Button
@@ -17,5 +16,6 @@ export const Settings = ({ navigation }: any) => {
                 }
             />
         </>
+
     );
 }
