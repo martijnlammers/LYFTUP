@@ -7,26 +7,26 @@ import {
 } from './Libs/Navigation'
 
 
-const headerOptions = {
-  headerStyle: {
-    backgroundColor: Colors.HEADER,
-  },
-  headerBackVisible: false,
-  headerTitle:'',
-}
 
-
+// https://reactnative.dev/docs/navigation
 const Stack = createNativeStackNavigator();
 const StackScreens = Object.keys(Screens).map((screen: string, index: number) =>
   <Stack.Screen
     key={index}
     name={screen}
     component={Screens[screen as keyof typeof Screens]}
-    options={headerOptions}
+
+    // https://reactnavigation.org/docs/native-stack-navigator/#options
+    options={{
+      animation:'fade',
+      headerTitle:'',
+      headerBackVisible: false,
+      headerStyle:{
+        backgroundColor: Colors.HEADER
+      }
+    }}
   />
 )
-
-
 export default function App() {
   return (
     <>
@@ -40,5 +40,3 @@ export default function App() {
 }
 
 
-// https://reactnative.dev/docs/navigation
-// https://reactnavigation.org/docs/native-stack-navigator/#options
