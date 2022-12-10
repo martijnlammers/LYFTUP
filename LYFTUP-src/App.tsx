@@ -1,39 +1,44 @@
-
-import React from 'react'
-import * as Screen from './Libs/Screens'
+import * as Screens from './Screens/All'
+import * as Colors from './Assets/Colors'
+import { Image } from './Libs/Components'
 import {
   NavigationContainer,
   createNativeStackNavigator
 } from './Libs/Navigation'
 
-import { Text } from './Libs/Components';
+
+const headerOptions = {
+  headerStyle: {
+    backgroundColor: Colors.HEADER,
+  },
+  headerBackVisible: false,
+  headerTitle:'',
+}
 
 
 const Stack = createNativeStackNavigator();
+const StackScreens = Object.keys(Screens).map((screen: string, index: number) =>
+  <Stack.Screen
+    key={index}
+    name={screen}
+    component={Screens[screen as keyof typeof Screens]}
+    options={headerOptions}
+  />
+)
+
 
 export default function App() {
   return (
     <>
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name="Home" component={Screen.Home} options={{
-            headerStyle: {
-              backgroundColor: '#f4511e',
-            },
-            headerBackVisible: false,
-            headerTitle: () => <Text> Hello</Text>,
-
-          }} />
-          <Stack.Screen name="Settings" component={Screen.Settings} options={{
-            headerStyle: {
-              backgroundColor: '#f4511e',
-            },
-            headerBackVisible: false,
-            headerTitle: () => <Text> Hello</Text>
-
-          }} />
+          {StackScreens}
         </Stack.Navigator>
       </NavigationContainer>
     </>
   );
 }
+
+
+// https://reactnative.dev/docs/navigation
+// https://reactnavigation.org/docs/native-stack-navigator/#options
